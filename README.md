@@ -1,7 +1,6 @@
 # Sakhinet
 
-Sakhinet is a verified, anonymous help network for girls inside schools and colleges. With one tap, a girl who needs a pad or is dealing with period cramps alerts trusted volunteers from her own campus. It includes a washroom planner, a rewards system for helpers, and a dashboard that shows colleges where shortages happen.
-
+Sakhinet is a verified, anonymous help network for girls inside schools and colleges. With one tap, a girl who needs a pad or has period cramps alerts trusted volunteers from her own campus. It includes a washroom planner, rewards for helpers and a college dashboard. SMS and Bluetooth offline alerts are planned next.
 ## Status
 
 Working prototype built for the Hack Social challenge.
