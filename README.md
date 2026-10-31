@@ -13,6 +13,7 @@ Implemented:
 - Washroom list with ratings, filters and problem reports
 - College dashboard with anonymous totals
 - Mobile app (Expo, React Native) for requests, washrooms and rewards
+- Automated API tests
 
 Planned (not built yet):
 - SMS fallback when there is no data connection
@@ -87,7 +88,7 @@ npm install
 npx expo start
 ```
 
-In `frontend/App.js`, set `API_URL` to your laptop's IP address (for example `http://192.168.1.5:5000`), and set `COLLEGE_ID` and `VOLUNTEER_ID` to ids from your sample data. Scan the QR code with Expo Go. Your phone and laptop must be on the same Wi-Fi.
+In `frontend/App.js`, set `API_URL` to your laptop's IP address (for example `http://192.168.1.5:5000`). Find the IP by running `ipconfig` on Windows and copying the IPv4 Address of your Wi-Fi adapter. The college and user ids in `App.js` already match `database/sample-data.sql`. Scan the QR code with Expo Go. Your phone and laptop must be on the same Wi-Fi, and the backend must be running.
 
 ## Environment variables
 
