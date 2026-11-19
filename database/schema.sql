@@ -86,3 +86,29 @@ alter table points_log disable row level security;
 alter table washrooms disable row level security;
 alter table reports disable row level security;
 alter table dispensers disable row level security;
+
+
+-- Campus SOS additions
+alter table requests add column if not exists priority int default 0;
+alter table requests add column if not exists latitude double precision;
+alter table requests add column if not exists longitude double precision;
+
+create table if not exists trusted_contacts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references users(id),
+  name text not null,
+  phone text not null,
+  created_at timestamptz default now()
+);
+
+create table if not exists safe_points (
+  id uuid primary key default gen_random_uuid(),
+  college_id uuid references colleges(id),
+  name text not null,
+  note text,
+  latitude double precision,
+  longitude double precision
+);
+
+alter table trusted_contacts disable row level security;
+alter table safe_points disable row level security;

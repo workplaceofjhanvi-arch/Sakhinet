@@ -8,6 +8,7 @@ const responseRoutes = require('./routes/responseRoutes');
 const washroomRoutes = require('./routes/washroomRoutes');
 const rewardRoutes = require('./routes/rewardRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const sosRoutes = require('./routes/sosRoutes');
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/responses', responseRoutes);
 app.use('/api/washrooms', washroomRoutes);
 app.use('/api/rewards', rewardRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/sos', sosRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
